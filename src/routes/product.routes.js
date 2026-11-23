@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get('/getAllProducts', validate(paginationSchema, 'query'), productController.getAllProducts);
 router.post('/createProduct', validate(productSchema), productController.createProduct);
-router.put('/updateproduct/:id', validate(productSchema), productController.updateProduct);
+router.put('/updateProduct/:id', validate(productSchema), productController.updateProduct);
 router.delete('/deleteProduct/:id', productController.deleteProduct);
 
 export default router;
